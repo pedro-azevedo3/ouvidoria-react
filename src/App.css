@@ -106,8 +106,15 @@ body,
 
 .first-image {
   text-align: center;
-  padding-top: 10px;
   cursor: pointer;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+  height: 200px;
+}
+
+.first-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 .form-textarea {
