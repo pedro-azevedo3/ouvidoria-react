@@ -4,7 +4,6 @@ import { isEmail } from "validator";
 import Logo from "../assets/logo.png";
 
 const GoodForm = () => {
-  const [setFormSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
