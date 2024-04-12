@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { isEmail } from "validator";
 import Logo from "../assets/logo.png";
 
 const GoodForm = () => {
+  const [setFormSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm();
 
   const watchPassword = watch("password");
 
-  const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+  const onSubmit = async (data) => { 
+    alert("Report done with success!!✅");
+    reset();
+    window.location.reload();
   };
 
   console.log("RENDER");
@@ -128,11 +132,11 @@ const GoodForm = () => {
           {...register("typeOfReport", { validate: (value) => value !== "0" })}
         >
           <option value="0">Type of your report</option>
-          <option value="developer">Denounce</option>
-          <option value="praise">Praise</option>
-          <option value="complaint">Complaint</option>
-          <option value="simplify">Simplify</option>
-          <option value="support">Suport</option>
+          <option value="developer">Denounce 🚨</option>
+          <option value="praise">Praise 👍🏻</option>
+          <option value="complaint">Complaint 🫱🏻‍🫲🏻</option>
+          <option value="simplify">Simplify 😎</option>
+          <option value="support">Suport ✅</option>
         </select>
 
         {errors?.profession?.type === "validate" && (
@@ -160,7 +164,7 @@ const GoodForm = () => {
       </div>
 
       <div className="form-group">
-        <button onClick={() => handleSubmit(onSubmit)()}>Send report</button>
+        <button onClick={handleSubmit(onSubmit)}>Send report</button>
       </div>
     </div>
   );

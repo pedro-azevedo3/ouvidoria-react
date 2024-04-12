@@ -22,6 +22,8 @@ body,
   align-items: center;
   min-height: 100vh;
   overflow-y: auto;
+  margin-bottom: 100vh;
+  padding-bottom: 40px;
 }
 
 .form-group {
@@ -104,9 +106,8 @@ body,
 
 .first-image {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 10px;
   cursor: pointer;
-  margin-top: 20vh;
 }
 
 .form-textarea {
