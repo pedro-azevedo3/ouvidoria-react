@@ -1,29 +1,25 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html,
 body,
 #root {
+  box-sizing: border-box;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
 }
 
 .app-container {
-  background: #111;
-  height: 100%;
-  width: 100%;
+  background: #191919;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   overflow-y: auto;
-  margin-bottom: 100vh;
-  padding-bottom: 40px;
+  margin-bottom: 0;
+  padding-bottom: 5rem;
+  color: #eee;
 }
 
 .form-group {
@@ -73,6 +69,11 @@ body,
   margin-top: 8px;
 }
 
+.error-message {
+  color: rgb(255, 72, 72);
+  margin-top: 8px;
+}
+
 .form-group select {
   padding: 12px;
   border: none;
@@ -91,7 +92,7 @@ body,
   padding: 10px;
   border-radius: 5px;
   color: #eee;
-  background-color: #0F75BC;
+  background-color: #0f75bc;
   font-weight: 500;
   font-size: 1rem;
   margin-top: 10px;
@@ -101,20 +102,22 @@ body,
 
 .form-group button:hover {
   cursor: pointer;
-  background-color: #06377B;
+  background-color: #06377b;
+}
+
+header {
+  background-color: #f1f0f0;
+  width: 100%;
 }
 
 .first-image {
   text-align: center;
   cursor: pointer;
-  padding-top: 20vh;
-  padding-bottom: 10vh;
-  height: 200px;
+  padding: 2rem;
 }
 
 .first-image img {
   max-width: 100%;
-  height: auto;
 }
 
 .form-textarea {
@@ -136,4 +139,38 @@ body,
 
 .form-textarea.input-error {
   outline: 1px solid rgb(255, 72, 72);
+}
+
+.my-reports-container {
+  background-color: #191919;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  width: 30rem;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: #111;
+}
+
+.card-content {
+  color: #eee;
+  font-size: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+hr {
+  width: 104rem;
 }
